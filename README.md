@@ -1,6 +1,14 @@
 # CS5328-Assignment-5
 Questions #2 and #3
 
+Question 2 Files for the Service Level Facade Pattern are in CS5328-Assignment-5\demo\src\main\java\com\example\question2
+
+Its test file is ServiceLevelTest.java in CS5328-Assignment-5\demo\src\test\java\com\example
+
+Question 3 Files for the Service Prototype Pattern are in CS5328-Assignment-5\demo\src\main\java\com\example\question3
+
+Its test file is ServicePrototypeTest.java in CS5328-Assignment-5\demo\src\test\java\com\example
+
 Project Structure
 ```
 .gitignore
@@ -31,8 +39,9 @@ demo/
             java/
                 com/
                     example/
+                        ServiceFacadeTest.java
                         ServicePrototypeTest.java
-                        ServiceLevelTest.java
+                        
 lib/
     hamcrest-core-1.3.jar
     junit-4.13.2.jar

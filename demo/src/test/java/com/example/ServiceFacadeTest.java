@@ -6,7 +6,7 @@ import com.example.question2.ServiceLevelMaker;
 
 import static org.junit.Assert.*;
 
-public class ServiceLevelTest {
+public class ServiceFacadeTest {
 
     @Test
     public void testCalculateCarPOOLPrice() {
