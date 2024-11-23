@@ -1,15 +1,28 @@
 # CS5328-Assignment-5
-Questions #2 and #3
 
-Question 2 Files for the Service Level Facade Pattern are in CS5328-Assignment-5\demo\src\main\java\com\example\question2
+## Questions #2 and #3
 
-Its test file is ServiceLevelTest.java in CS5328-Assignment-5\demo\src\test\java\com\example
+### Question 2
+Files for the **Service Level Facade Pattern** are located in:
+```
+CS5328-Assignment-5/demo/src/main/java/com/example/question2
+```
+The test file is:
+```
+ServiceFacadeTest.java in CS5328-Assignment-5/demo/src/test/java/com/example
+```
 
-Question 3 Files for the Service Prototype Pattern are in CS5328-Assignment-5\demo\src\main\java\com\example\question3
+### Question 3
+Files for the **Service Prototype Pattern** are located in:
+```
+CS5328-Assignment-5/demo/src/main/java/com/example/question3
+```
+The test file is:
+```
+ServicePrototypeTest.java in CS5328-Assignment-5/demo/src/test/java/com/example
+```
 
-Its test file is ServicePrototypeTest.java in CS5328-Assignment-5\demo\src\test\java\com\example
-
-Project Structure
+## Project Structure
 ```
 .gitignore
 .idea/
@@ -41,55 +54,41 @@ demo/
                     example/
                         ServiceFacadeTest.java
                         ServicePrototypeTest.java
-                        
 lib/
     hamcrest-core-1.3.jar
     junit-4.13.2.jar
 README.md
 ```
 
-Dependencies
-
-To run the tests, you need JUnit 4.13.2
-
+## Dependencies
+To run the tests, you need **JUnit 4.13.2**:
+```xml
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.13.2</version>
+    <scope>test</scope>
+</dependency>
 ```
-    <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>4.13.2</version>
-        <scope>test</scope>
-    </dependency>
-```
-Classes
 
-Question 2
+## Classes
 
-ServiceLevel: Interface defining the calculatePrice method.
+### Question 2
+- **ServiceLevel**: Interface defining the `calculatePrice` method.
+- **carX**: Implements `ServiceLevel` with a fixed price of 20.0.
+- **carBlack**: Implements `ServiceLevel` with a fixed price of 50.0.
+- **carPool**: Implements `ServiceLevel` with a fixed price of 10.0.
+- **ServiceLevelMaker**: Facade class that provides methods to calculate prices for different service levels.
 
-carX: Implements ServiceLevel with a fixed price of 20.0.
+### Question 3
+- **ServicePrototype**: Abstract class defining the prototype for services. Includes methods for cloning and customizing services.
+- **BasicRideService**: Extends `ServicePrototype` for basic ride services.
+- **CarEatsService**: Extends `ServicePrototype` for food delivery services.
+- **CarGoService**: Extends `ServicePrototype` for cargo services.
+- **City**: Represents a city with price modifiers for different services.
+- **Restaurant**: Represents a restaurant partner for `CarEatsService`.
+- **ServiceRegistry**: Manages service prototypes and provides methods to clone and customize services.
+- **VehicleType**: Enum defining different vehicle types (SEDAN, HATCHBACK, SUV, TRUCK).
 
-carBlack: Implements ServiceLevel with a fixed price of 50.0.
-
-carPool: Implements ServiceLevel with a fixed price of 10.0.
-
-ServiceLevelMaker: Facade class that provides methods to calculate prices for different service levels.
-
-Question 3
-
-ServicePrototype: Abstract class defining the prototype for services. Includes methods for cloning and customizing services.
-
-BasicRideService: Extends ServicePrototype for basic ride services.
-
-CarEatsService: Extends ServicePrototype for food delivery services.
-
-CarGoService: Extends ServicePrototype for cargo services.
-
-City: Represents a city with price modifiers for different services.
-
-Restaurant: Represents a restaurant partner for CarEatsService.
-
-ServiceRegistry: Manages service prototypes and provides methods to clone and customize services.
-
-VehicleType: Enum defining different vehicle types (SEDAN, HATCHBACK, SUV, TRUCK).
-
-Running the Tests
+## Running the Tests
+Hit the **VSCode** or **IntelliJ** run buttons when viewing the test files.
